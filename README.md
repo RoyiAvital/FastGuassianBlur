@@ -39,7 +39,8 @@ Play with te parameters as you wish.
 ## RoadMap
  1. Implement the following methods:
   - [StackBlur][6].
-  - [Efficient and Accurate Gaussian Image Filtering Using Running Sums][7]
+  - [Efficient and Accurate Gaussian Image Filtering Using Running Sums][7].
+  - [Recursively Implementating the Gaussian and Its Derivatives][8].
  2. Create MEX implementations.
 
 ## To Do List
@@ -57,3 +58,4 @@ Play with te parameters as you wish.
   [5]: http://www.mathworks.com/matlabcentral/profile/authors/869888-jan-simon
   [6]: http://www.quasimondo.com/StackBlurForCanvas/StackBlurDemo.html
   [7]: http://arxiv.org/abs/1107.4958
+  [8]: https://hal.inria.fr/inria-00074778/en/
