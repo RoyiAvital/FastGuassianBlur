@@ -1,11 +1,13 @@
-# Fast Guassian Blur
+[![Visitors](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FRoyiAvital%2FStackExchangeCodes&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Visitors+%28Daily+%2F+Total%29&edge_flat=false)](https://github.com/RoyiAvital/StackExchangeCodes)
+
+# Fast Gaussian Blur
 
 ## General
 Evaluation of few methods to apply Gaussian Blur on an Image.  
 The project is written in MATLAB and the evaluation is by Run Time and Approximation Error.  
 The runtime is estimation of the overall complexity of the method and not optimization by coding.  
-Namely, this project is after the most efficient method for applying Gaussian Blur not teh fastest MATLAB implementation.  
-The complxiety of the claasic method depneds on the Image Size and the Guassian Kernel STD.  
+Namely, this project is after the most efficient method for applying Gaussian Blur not the fastest MATLAB implementation.  
+The complexity of the classic method depends on the Image Size and the Gaussian Kernel STD.  
 Some of the approximations complexity is independent of the Gaussian Kernel Standard Deviation (STD).
 
 ## Assumptions
@@ -20,32 +22,32 @@ This section describes the current implemented methods.
 The result is a convolution with a Gaussian Blur Kernel which is truncated.
 
 ### Box Filter Approximation
-According to the [Central Limit Threoem][1] a Gaussian Kernel can be approximated by convoloving Box Kernel over and over.  
-Box Blur by a Box Kernel can efficinetly implemnted using Integral Images ([Summed Area Table][2]).  
+According to the [Central Limit Theorem][1] a Gaussian Kernel can be approximated by convoloving Box Kernel over and over.  
+Box Blur by a Box Kernel can efficiently implemented using Integral Images ([Summed Area Table][2]).  
 Implementation using Integral Images makes this method complexity independent of the Gaussian Kernel STD.  
 
 ### IIR Filter Approximation
-The Gaussin Blur filter, based on the Gaussian Kernel has a specicif Frequency Response.  
-By an IIR Filter aaproximation of the Frequency Response a very efficinet implementation can achieved.  
-The approximation is done by a Polynomial and teh filtration is done in the Spatial Domain.  
+The Gaussian Blur filter, based on the Gaussian Kernel has a specific Frequency Response.  
+By an IIR Filter approximation of the Frequency Response a very efficient implementation can achieved.  
+The approximation is done by a Polynomial and the filtration is done in the Spatial Domain.  
 The filter is defined by a function which sets the filter coefficients as a function of the Gaussian Kernel STD.  
 If the filter (As implemented here) order is independent of the STD parameter, the complexity is constant.  
 
 ## Running The Code
 Download all the MATLAB files.  
 Run `GaussianBlurApproximationAnalysis` and see the results on MATLAB main screen.  
-Play with te parameters as you wish.
+Play with the parameters as you wish.
 
 ## RoadMap
  1. Implement the following methods:
-  - [StackBlur][6].
+  - [StackBlur][6] (See https://github.com/Quasimondo/QuasimondoJS/issues/8).
   - [Efficient and Accurate Gaussian Image Filtering Using Running Sums][7].
-  - [Recursively Implementating the Gaussian and Its Derivatives][8].
+  - [Recursively Implementing the Gaussian and Its Derivatives][8].
  2. Create MEX implementations.
 
 ## To Do List
  1. Make the second method of the IIR Filter work.
- 2. Create a system to compare the methos over a range of STD and image size.
+ 2. Create a system to compare the methods over a range of STD and image size.
  3. Include all the required references (Most are shown in the files).
 
 ## Refrences
