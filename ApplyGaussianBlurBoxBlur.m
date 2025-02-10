@@ -3,7 +3,7 @@ function [ mBlurredImage ] = ApplyGaussianBlurBoxBlur( mInputImage, gaussianKern
 % [ boxBlurKernel ] = CalculateBoxBlurKernel( boxBlurVar, numIterations )
 %   Approximates 1D Gaussian Kernel by iterative convolutions of "Extended Box Filter".
 % Input:
-%   - boxBlurVar        -   BoxFilter Varaiance.
+%   - boxBlurVar        -   BoxFilter Variance.
 %                           The variance of the output Box Filter.
 %                           Scalar, Floating Point (0, inf).
 %   - numIterations     -   Number of Iterations.
@@ -27,7 +27,7 @@ function [ mBlurredImage ] = ApplyGaussianBlurBoxBlur( mInputImage, gaussianKern
 %   1.  F
 %   Release Notes:
 %   -   1.0.001     19/03/2015  Royi Avital
-%       *   Fixed bug for calculatiuon of the radius from the length. When
+%       *   Fixed bug for calculation of the radius from the length. When
 %           small STD was given, the radius could have been negative.
 %   -   1.0.000     14/03/2015  Royi Avital
 %       *   First release version.
